@@ -34,7 +34,9 @@ const App = () => {
           <ContactForm handleClick={handleSubmit} />
         </Grid>
         <Grid item xs={5}>
-          <Contact data={contacts} />
+          {contacts.map((contact, index) => (
+            <Contact key={index} data={contact} />
+          ))}
         </Grid>
       </Grid>
     </div>

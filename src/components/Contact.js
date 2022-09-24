@@ -26,35 +26,28 @@ const Contact = ({ data }) => {
             marginTop: 8,
           }}
         >
-          {data.map((contact) => (
-            <div key={contact.phone}>
-              <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                  <Avatar
-                    sx={{ width: 70, height: 70, mr: 2 }}
-                    src={contact.photo}
-                  />
-                </ListItemAvatar>
-                <ListItemText
-                  primary={contact.name}
-                  secondary={
-                    <React.Fragment>
-                      <Typography
-                        sx={{ display: "block" }}
-                        component="span"
-                        variant="body2"
-                        color="text.primary"
-                      >
-                        {contact.phone}
-                      </Typography>
-                      {contact.email}
-                    </React.Fragment>
-                  }
-                />
-              </ListItem>
-              <Divider variant="inset" component="li" />
-            </div>
-          ))}
+          <ListItem alignItems="flex-start">
+            <ListItemAvatar>
+              <Avatar sx={{ width: 70, height: 70, mr: 2 }} src={data.photo} />
+            </ListItemAvatar>
+            <ListItemText
+              primary={data.name}
+              secondary={
+                <React.Fragment>
+                  <Typography
+                    sx={{ display: "block" }}
+                    component="span"
+                    variant="body2"
+                    color="text.primary"
+                  >
+                    {data.phone}
+                  </Typography>
+                  {data.email}
+                </React.Fragment>
+              }
+            />
+          </ListItem>
+          <Divider variant="inset" component="li" />
         </List>
       </div>
     </>
