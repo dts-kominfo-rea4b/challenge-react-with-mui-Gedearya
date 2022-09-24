@@ -23,7 +23,6 @@ const Contact = ({ data }) => {
             width: "100%",
             maxWidth: 360,
             bgcolor: "#b9f6ca",
-            marginTop: 8,
           }}
         >
           <ListItem alignItems="flex-start">

@@ -33,7 +33,7 @@ const App = () => {
         <Grid item xs={7}>
           <ContactForm handleClick={handleSubmit} />
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={5} sx={{ marginTop: 8 }}>
           {contacts.map((contact, index) => (
             <Contact key={index} data={contact} />
           ))}
